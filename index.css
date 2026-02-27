@@ -1,0 +1,326 @@
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+  }
+
+  /* HEADER */
+  .header{
+   position: sticky;
+   top:0; left:0; right: 0;
+   background-color: var(--white);
+   z-index: 1000;
+   border-bottom: var(--border);
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   padding: 1.5rem 2rem;
+}
+
+.header .flex .logo{
+   font-size: 2.5rem;
+   color: var(--black);
+}
+
+.header .flex .search-form{
+   width: 50rem;
+   border-radius: .5rem;
+   background-color: var(--light-bg);
+   padding:1.5rem 2rem;
+   display: flex;
+   gap:2rem;
+
+}
+
+.header .flex .search-form input{
+   width: 100%;
+   font-size: 1.8rem;
+   color:var(--black);
+   background:none;
+}
+
+.header .flex .search-form button{
+   background:none;
+   font-size: 2rem;
+   cursor: pointer;
+   color:var(--black);
+}
+
+.header .flex .search-form button:hover{
+   color: var(--main-color);
+}
+
+.header .flex .icons div{
+   font-size: 2rem;
+   color:var(--black);
+   background-color: var(--light-bg);
+   border-radius: .5rem;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.5rem;
+   cursor: pointer;
+   text-align: center;
+   margin-left: .7rem;
+}
+
+.header .flex .icons div:hover{
+   background-color: var(--black);
+   color:var(--white);
+}
+  
+  /* ---------- NAVBAR ---------- */
+  
+  .navbar {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a73e8;
+  }
+  
+  .nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: #1a73e8;
+  }
+  
+  /* ---------- HERO ---------- */
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg,#1a73e8,#4285f4);
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background: white;
+    color: #1a73e8;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* ---------- CONTENT ---------- */
+  
+  .container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+  }
+  
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+
+  .flavor-text {
+    font-size: 13px;
+    color: var(--text-muted);
+
+  }
+  
+  /* ---------- FOOTER ---------- */
+  
+  footer {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+  }
+  
+  /* ---------- POPUP (AD BOMB) ---------- */
+  
+  .popup {
+    position: fixed;
+    width: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #ff3b3b;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 9999;
+    animation: shake 0.2s infinite alternate;
+  }
+  
+  .popup-header {
+    background: #ff3b3b;
+    color: white;
+    padding: 6px;
+    font-size: 13px;
+  }
+  
+  .popup img {
+    width: 100%;
+  }
+  
+  .close-btn {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    background: #eee;
+    cursor: pointer;
+  }
+  
+  @keyframes shake {
+    from { transform: translateX(-1px); }
+    to { transform: translateX(1px); }
+  }
+
+  /* ---------- CHAT BUTTON ---------- */
+
+#chatButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1a73e8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+/* ---------- CHAT WINDOW ---------- */
+
+#chatWindow {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* header */
+
+.chat-header {
+  background: #1a73e8;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* message area */
+
+#chatMessages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+/* message bubbles */
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 75%;
+}
+
+.bot {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.user {
+  background: #1a73e8;
+  color: white;
+  margin-left: auto;
+}
+
+/* input area */
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+}
+
+.chat-input button {
+  border: none;
+  padding: 12px 20px;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+}
+
+  /* ADDED FROM TES PROJECT */
