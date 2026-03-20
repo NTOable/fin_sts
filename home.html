@@ -300,9 +300,9 @@ function fakeMessage(text, isLink = false) {
     link.textContent = text;
     link.style.color = "#1a73e8";
     link.style.cursor = "pointer";
-// add actual website
+
     link.onclick = () => {
-      requestLocationAndRedirect("https://www.facebook.com/photo/?fbid=26181099341490083&set=a.161626950530678");
+      requestLocationAndRedirect("education.html");
     };
 
     msg.appendChild(link);
